@@ -1,0 +1,19 @@
+{
+  "name": "nurturelabs_intern_assignments",
+  "version": "1.0.0",
+  "description": "Backend for advisor network ",
+  "main": "index.js",
+  "author": "akashkumaryadav",
+  "license": "MIT",
+  "scripts": {
+    "start": "node main",
+    "dev":"nodemon start"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "jwt": "^0.2.0",
+    "mongoose": "^5.12.0",
+    "nodemon": "^2.0.7"
+  }
+}
