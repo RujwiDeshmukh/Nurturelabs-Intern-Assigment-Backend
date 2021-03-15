@@ -25,8 +25,8 @@ App.use("/user", require("./routes/user"));
 App.use("/admin", require("./routes/admin"));
 
 //TEST ROUTE
-App.get("/test", (req, res) => {
-  res.status(200).send("RUNNING");
+App.get("/", (req, res) => {
+  res.status(200).send("server RUNNING BACKEND NURTURELAB INTERNSHIP TEST");
 });
 
 // server listem
