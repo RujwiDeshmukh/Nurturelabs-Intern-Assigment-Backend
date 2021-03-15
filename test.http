@@ -1,4 +1,53 @@
+// this files is for integrated api testing of rest api with the help REST client extension in VSCODE only
+
 GET http://localhost:3001/test HTTP/1.1
-Content-Type: application/json
 
 ###
+
+// user routes
+POST http://localhost:3001/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"akashkumaryadav",
+    "email":"akash.kumar.yadav.cse@gmail.com",
+    "password":"code1234"
+}
+###
+
+POST http://localhost:3001/user/login  HTTP/1.1
+Content-Type: application/json
+
+{
+    "email":"akash.kumar.yadav.cse@gmail.com",
+    "password":"code1234"
+}
+###
+// to get list of advisors
+GET  http://localhost:3001/user/604e9ae8a68b6739fc669fe9/advisor HTTP/1.1
+
+###
+GET http://localhost:3001/user/604e9ae8a68b6739fc669fe9/advisor/booking HTTP/1.1
+
+###
+// get profile of one advisor and book it
+POST http://localhost:3001/user/604e9ae8a68b6739fc669fe9/advisor/604e9ac8a68b6739fc669fe8 HTTP/1.1
+Content-Type: application/json
+
+{
+    "bookingTime":"1615763090126"
+}
+
+
+
+###
+
+
+// admin routes
+POST http://localhost:3001/admin/advisor HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"advisor4",
+    "photo_url":"https://picsum.photos/200/300?random=1"
+}
