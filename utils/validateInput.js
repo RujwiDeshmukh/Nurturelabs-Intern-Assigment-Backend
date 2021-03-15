@@ -1,5 +1,6 @@
-const errors = {};
 exports.validateAdvisorRegister = (data) => {
+  const errors = {};
+
   if (
     !data.name ||
     !data.photo_url ||
@@ -12,6 +13,8 @@ exports.validateAdvisorRegister = (data) => {
 };
 
 exports.validateUserInputRegister = (data) => {
+  const errors = {};
+
   if (
     !data.name ||
     !data.email ||
@@ -25,6 +28,8 @@ exports.validateUserInputRegister = (data) => {
 };
 
 exports.validateUserInputLogin = (data) => {
+  const errors = {};
+
   if (!data.email || !data.password || data.email === "") {
     errors["inputError"] = "Fields not provided";
   }
